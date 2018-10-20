@@ -241,7 +241,6 @@
         <h1 id="重新搭建vps"><a href="#重新搭建vps" class="headerlink" title="重新搭建vps"></a>重新搭建vps</h1><blockquote>
 <p>实现下载文件到Google Drive，使用emby点播视频<br>环境：Ubuntu 18.04 x64</p>
 </blockquote>
-<p>[toc]</p>
 <h2 id="SS-1"><a href="#SS-1" class="headerlink" title="SS^1"></a>SS<a href="https://github.com/shadowsocks/shadowsocks-libev" target="_blank" rel="noopener">^1</a></h2><ul>
 <li>重置服务</li>
 <li><p>使用命令清除ssh连接记录</p>
@@ -256,6 +255,9 @@
 <li><p>启动服务</p>
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start shadowsocks-libev</span><br></pre></td></tr></table></figure>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p>是否有开启==bbr==</p>
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr</span><br><span class="line">tcp_bbr                20480  32</span><br></pre></td></tr></table></figure>
 </li>
