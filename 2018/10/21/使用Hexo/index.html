@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 使用Hexo · sdjk</title><meta name="description" content="使用Hexo - sdjk"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="https://sdjk.github.io/atom.xml" title="sdjk"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="http://weibo.com/sunchongsheng" target="_blank" class="nav-list-link">WEIBO</a></li><li class="nav-list-item"><a href="https://github.com/pinggod" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">使用Hexo</h1><div class="post-info">Oct 21, 2018</div><div class="post-content"><blockquote>
+<p>利用GitHub Pages和Hexo<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">^0</a>搭建一个blog</p>
+</blockquote>
+<p>[toc]</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>本机需要安装了git和node.js</p>
+</blockquote>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><ul>
+<li>macOS 安装完==command line tools==自带git，就是版本不是最新的。</li>
+</ul>
+<h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><blockquote>
+<p>在macOS环境下推荐使用==nvm==安装<a href="https://yoember.com/nodejs/the-best-way-to-install-node-js/" target="_blank" rel="noopener">^1</a></p>
+</blockquote>
+<h4 id="安装nvm-2"><a href="#安装nvm-2" class="headerlink" title="安装nvm^2"></a>安装nvm<a href="https://github.com/creationix/nvm#manual-uninstall" target="_blank" rel="noopener">^2</a></h4><ul>
+<li><p>使用cURL安装：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启终端机，运行命令：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> -v nvm</span><br></pre></td></tr></table></figure>
+<ul>
+<li>终端没有响应，是因为没有==.bash_profile==<a href="环境变量配置文件:https://en.wikipedia.org/wiki/PATH_(variable)">^3</a>文件。</li>
+</ul>
+</li>
+<li><p>创建==.bash_profile==文件</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<ul>
+<li>再次运行安装脚本。</li>
+</ul>
+</li>
+<li><p>重启终端，运行命令：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">command</span> -v nvm</span><br><span class="line">nvm</span><br></pre></td></tr></table></figure>
+<ul>
+<li>终端返回<code>nvm</code>，安装成功。</li>
+</ul>
+</li>
+</ul>
+<h4 id="安装node-js稳定版"><a href="#安装node-js稳定版" class="headerlink" title="安装node.js稳定版"></a>安装node.js稳定版</h4><ul>
+<li><p>使用nvm安装：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install stable</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看版本：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br><span class="line">v10.12.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>附带也安装了npm：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br><span class="line">6.4.1</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><ul>
+<li><p>使用npm安装：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-g</code>是全局（global）</li>
+<li><code>-cli</code>是命令行界面（command-line interface）</li>
+</ul>
+</li>
+</ul>
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><ul>
+<li><p>使用命令：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-cli -g</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><ul>
+<li><p>选择自己想要的安装目录，安装：</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/10/21/重新搭建vps/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2018 <a href="https://sdjk.github.io">sdjk</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
