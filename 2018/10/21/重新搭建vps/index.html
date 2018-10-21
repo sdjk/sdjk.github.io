@@ -230,7 +230,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">文章目录</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#重新搭建vps"><span class="toc-text">重新搭建vps</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SS1"><span class="toc-text">SS1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#aria22"><span class="toc-text">aria22</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-text">运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WebUI-Aria23"><span class="toc-text">WebUI-Aria23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emby4"><span class="toc-text">Emby4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rclone"><span class="toc-text">rclone</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装5"><span class="toc-text">安装5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-Drive授权6"><span class="toc-text">Google Drive授权6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挂载8"><span class="toc-text">挂载8</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SS1"><span class="toc-text">SS1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#aria22"><span class="toc-text">aria22</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#运行"><span class="toc-text">运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WebUI-Aria23"><span class="toc-text">WebUI-Aria23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Emby4"><span class="toc-text">Emby4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rclone"><span class="toc-text">rclone</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装5"><span class="toc-text">安装5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Google-Drive授权6"><span class="toc-text">Google Drive授权6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挂载8"><span class="toc-text">挂载8</span></a></li></ol></li></ol>
     </div>
   </div>
 
@@ -238,9 +238,10 @@
 
     <div class="post-content">
       
-        <h1 id="重新搭建vps"><a href="#重新搭建vps" class="headerlink" title="重新搭建vps"></a>重新搭建vps</h1><blockquote>
+        <blockquote>
 <p>实现下载文件到Google Drive，使用emby点播视频<br>环境：Ubuntu 18.04 x64</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="SS1"><a href="#SS1" class="headerlink" title="SS1"></a>SS<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></h2><ul>
 <li>重置服务</li>
 <li><p>使用命令清除ssh连接记录</p>
@@ -255,9 +256,6 @@
 <li><p>启动服务</p>
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start shadowsocks-libev</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<a id="more"></a>
-<ul>
 <li><p>是否有开启==bbr==</p>
   <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lsmod | grep bbr</span><br><span class="line">tcp_bbr                20480  32</span><br></pre></td></tr></table></figure>
 </li>
