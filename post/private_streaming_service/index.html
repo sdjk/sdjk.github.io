@@ -1,0 +1,291 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>个人云端影音库搭建指南 | 别盯着看⬆️</title>
+<link rel="shortcut icon" href="https://sdjk.github.io/favicon.ico?v=1654969441274">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://sdjk.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="个人云端影音库搭建指南 | 别盯着看⬆️ - Atom Feed" href="https://sdjk.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+⚠️ 项目有风险，使用需谨慎，最好别用！
+
+
+提前准备
+
+科学上网环境
+Google账号、ngrok的账号
+有台电脑，接下来的演示都是基于电脑端
+
+开始
+
+
+进入下面这个GitHub仓库：
+
+
+
+进入脚本文件Google_download..." />
+    <meta name="keywords" content="Infuse,GoogleColab,AriaNg,Kodi" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://sdjk.github.io">
+  <img class="avatar" src="https://sdjk.github.io/images/avatar.png?v=1654969441274" alt="">
+  </a>
+  <h1 class="site-title">
+    别盯着看⬆️
+  </h1>
+  <p class="site-description">
+    会眼花的👀
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              个人云端影音库搭建指南
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-05-11
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://sdjk.github.io/tag/k8-BP3f7-/" class="post-tag">
+                  # Infuse
+                </a>
+              
+                <a href="https://sdjk.github.io/tag/xAa2DPoKj/" class="post-tag">
+                  # GoogleColab
+                </a>
+              
+                <a href="https://sdjk.github.io/tag/DRGjfjiaJ/" class="post-tag">
+                  # AriaNg
+                </a>
+              
+                <a href="https://sdjk.github.io/tag/BjrRJe4Qp/" class="post-tag">
+                  # Kodi
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://sdjk.github.io/post-images/private_streaming_service.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <blockquote>
+<p>⚠️ 项目有风险，使用需谨慎，最好别用！</p>
+</blockquote>
+<!-- more -->
+<h2 id="提前准备">提前准备</h2>
+<ul>
+<li>科学上网环境</li>
+<li>Google账号、ngrok的账号</li>
+<li>有台电脑，接下来的演示都是基于电脑端</li>
+</ul>
+<h2 id="开始">开始</h2>
+<ul>
+<li>
+<p>进入下面这个GitHub仓库：</p>
+<figure data-type="image" tabindex="1"><a href="https://github.com/sdjk/Google_download"><img src="https://gh-card.dev/repos/sdjk/Google_download.svg?fullname=" alt="sdjk/Google_download - GitHub" loading="lazy"></a></figure>
+</li>
+<li>
+<p>进入脚本文件<code>Google_download.ipynb</code>，点击<strong>Open in Colab</strong>图标。</p>
+</li>
+<li>
+<p>进入colab页面之后，建议先点击顶部菜单栏中的<strong>复制到云端硬盘</strong>，创建一个自己的副本。</p>
+</li>
+<li>
+<p>之后使用自己的副本进行操作，下次运行更简单，在Google drive的<strong>Colab Notebooks</strong>目录中可以找到副本。</p>
+</li>
+</ul>
+<h2 id="脚本操作">脚本操作</h2>
+<ul>
+<li>先点击顶部菜单栏中的<strong>连接</strong></li>
+<li>然后点击<code>←←←挂载Google drive</code>前的小图标，进行Google drive的挂载，这里需要进行授权。</li>
+<li>之后填写脚本里的三个参数<code>DownloadPath</code>、<code>RPCPasword</code>、<code>Authtoken</code>
+<ul>
+<li>DownloadPath的获取，可以点击左侧菜单中的<strong>文件</strong>图标，就可以看到目录结构，选择你的目标文件夹，右键<strong>复制路径</strong>就可以了，正常路径应该是<code>/content/drive/...</code></li>
+<li><strong>MyDrive</strong>代表你自己的盘，<strong>Shareddrives</strong>代表团队盘，</li>
+</ul>
+</li>
+<li>填写完参数之后，点击<code>←←←设置完运行</code> 前的小图标，耐心等会，之后会出现一个指向AriaNg的按钮，点击下。</li>
+</ul>
+<h2 id="进入ariang">进入AriaNG</h2>
+<ul>
+<li>在AriaNG的操作就都挺简单的了，不过最好还是检查下，看看设置的下载路径是否被正确导入。</li>
+<li>可以开始下载你需要的资源了。</li>
+</ul>
+<h2 id="一些补充">一些补充</h2>
+<ul>
+<li>再次提醒：项目有风险，使用需谨慎，最好别用！</li>
+<li>Colab的局限：超过69GB的资源是无法下载的；稳定性不够，随时可能会断开，得时常查看运行状态。</li>
+<li>尽量别用BT下载，这是Colab<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>明令禁止的，HTTP可以通过阿里云和迅雷云：
+<ul>
+<li>阿里云，可以通过脚本RPC下载，速度很快，但推出会员服务之后，应该也不会长久</li>
+<li>迅雷云，也可以通过脚本RPC下载，适合下老资源，没有会员速度感人，测试了白金会员速度继续感人。</li>
+</ul>
+</li>
+<li>在下载阿里云和迅雷云的大资源时，容易遇到返回头报错，可以断点续传，再添加一次。</li>
+<li>不要在AriaNg显示下载完成之后立马断开连接，因为数据下载完之后还有个传输的过程，可以看看colab里磁盘容量的变化。</li>
+<li>关于团队盘，可以通过<a href="https://td.msgsuite.workers.dev/">https://td.msgsuite.workers.dev/</a>申请</li>
+</ul>
+<h2 id="点播平台">点播平台</h2>
+<ul>
+<li>Apple生态里首推<a href="https://apps.apple.com/us/app/infuse-7/id1136220934">Infuse</a>，有非常好看的海报墙，但需要付费；还有<a href="https://apps.apple.com/us/app/filebox-play-with-files/id1558391784">Fileball</a>，可以免费挂载自己的盘，挂载团队盘需要付费，但没有海报墙。</li>
+<li>其他平台，可以使用<a href="https://kodi.tv/">KODI</a>，在Xbox平台测试过，支持海报墙，并且还免费，就是设置上有点点麻烦。</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://research.google.com/colaboratory/faq.html">https://research.google.com/colaboratory/faq.html</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%8F%90%E5%89%8D%E5%87%86%E5%A4%87">提前准备</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B">开始</a></li>
+<li><a href="#%E8%84%9A%E6%9C%AC%E6%93%8D%E4%BD%9C">脚本操作</a></li>
+<li><a href="#%E8%BF%9B%E5%85%A5ariang">进入AriaNG</a></li>
+<li><a href="#%E4%B8%80%E4%BA%9B%E8%A1%A5%E5%85%85">一些补充</a></li>
+<li><a href="#%E7%82%B9%E6%92%AD%E5%B9%B3%E5%8F%B0">点播平台</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'f82ba3d3a9e891499cfa',
+    clientSecret: '9152e9d3b9a6984005cae7367fa2288fb64cbd79',
+    repo: 'GitalkComment',
+    owner: 'sdjk',
+    admin: ['sdjk'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://sdjk.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
